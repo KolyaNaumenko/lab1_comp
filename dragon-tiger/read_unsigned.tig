@@ -14,6 +14,7 @@ function read_unsigned(): int =
     num
 end
 var a: int := read_unsigned()
-in print_int(a*2);
+in 
+print_int(a*2);
 print("\n")
 end
