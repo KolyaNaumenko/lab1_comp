@@ -1,13 +1,13 @@
 let
   /* Read a positive integer from the standard input.
-     Returns -1 on error */
+     Returns -1 on error or EOF */
   function read_unsigned(): int =
     let
       var num := 0
       var char := getchar()
       var error := 0
     in
-      while char <> "" & error = 0 do (
+      while char <> "" & char <> chr(10) & error = 0 do (
         if ord(char) >= 48 & ord(char) <= 57 then
           num := num * 10 + (ord(char) - 48)
         else
