@@ -6,13 +6,13 @@ let
       var num := 0
       var char := getchar()
     in
-      while char <> "" do
+      while char <> "" do (
         if ord(char) >= 48 & ord(char) <= 57 then
           num := num * 10 + (ord(char) - 48)
         else
-          return -1
+          return -1;
         char := getchar()
-      end;
+      );
       num
     end
 var a: int := read_unsigned()
