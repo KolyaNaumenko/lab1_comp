@@ -1,0 +1,19 @@
+let
+function read_unsigned(): int =
+  let
+    var num := 0
+    var char := getchar()
+  in
+    while char <> "" do
+      if ord(char) >= 48 & ord(char) <= 57 then
+        num := num * 10 + (ord(char) - 48)
+      else
+        return -1
+      char := getchar()
+    end
+    num
+end
+var a: int := read_unsigned()
+in print_int(a*2);
+print("\n")
+end
