@@ -5,15 +5,16 @@ let
     let
       var num := 0
       var char := getchar()
+      var error := 0
     in
-      while char <> "" do (
+      while char <> "" & error = 0 do (
         if ord(char) >= 48 & ord(char) <= 57 then
           num := num * 10 + (ord(char) - 48)
         else
-          return -1;
+          error := 1;
         char := getchar()
       );
-      num
+      if error = 1 then -1 else num
     end
 var a: int := read_unsigned()
 in
